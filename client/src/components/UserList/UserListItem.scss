@@ -1,0 +1,287 @@
+@import '../../_mixins';
+@import '../../variables';
+
+$font-light: 'Raleway-Light', sans-serif;
+$font-medium: 'Raleway-Medium', sans-serif;
+$font-reg: 'Raleway-Regular', sans-serif;
+
+$font-bold1: 'Nato-Bold', sans-serif;
+$font-light1: 'Nato-Light', sans-serif;
+$font-medium1: 'Nato-Medium', sans-serif;
+$font-reg1: 'Nato-Regular', sans-serif;
+
+@font-face {
+  font-family: 'Raleway-Light';    
+  src: url('../../assets/fonts/Raleway/Raleway-Light.ttf');
+}
+
+@font-face{
+  font-family: 'Raleway-Medium';
+  src: url('../../assets/fonts/Raleway/Raleway-Medium.ttf');
+}
+
+@font-face{
+  font-family: 'Raleway-Regular';
+  src: url('../../assets/fonts/Raleway/Raleway-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Nato-Bold';    
+    src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Nato-Light';    
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Light.otf');
+}
+
+@font-face{
+  font-family: 'Nato-Medium';
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Medium.otf');
+}
+
+@font-face{
+  font-family: 'Nato-Regular';
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Regular.otf');
+}
+
+.back{
+    position: fixed;
+    right: 1rem;
+    @media (min-width: 720px)
+    {
+        right: 2rem;
+    }
+
+    @media (min-width: 1080px)
+    {
+        right: 11.5rem;
+    }
+
+    &__logoImg{
+        height: 18px; 
+    }
+}
+
+.userListItem{
+    width: 100%;
+    @media (min-width: 320px) and (max-width: 719px)
+    {
+        align-items: center;
+        background-color: $white;
+        width: 275px;
+        height: 220px;
+        margin: 1rem 1rem;
+        border-radius: 0.5rem;
+        padding: 0 1rem;
+        box-shadow: 5px 5px 10px #999999;			
+    }
+
+    &--desk{
+        @media (min-width: 1080px){
+        display: flex;
+        margin: 1.5rem 11.25rem 0 11.25rem;
+    }
+    @media(min-width: 720px) and (max-width: 1079px){        
+        margin: 1.5rem 2rem 0 2rem;
+        border-radius: 0.5rem;
+        padding: 0 1rem;
+        box-shadow: 5px 5px 10px #999999;
+    }
+}
+    &--tablet{
+        @media(min-width: 720px){
+            display: flex;
+            border-bottom: 1px $textFieldBorder solid;
+            // margin: 1.5rem 2rem 0 2rem;
+        }
+    }
+    &__labels{
+        display: none;
+        @media (min-width: 1080px){
+            margin: 1.5rem 11.25rem 0 11.25rem;
+            display: flex;
+            @include desktop-tablet-h4(); 
+            color: #000000;
+            &__userList{
+                padding-left: 0.5rem;
+                width: 276px;
+                margin-block-end: 0;
+            }
+            &__contact{
+                width: 276px;
+                margin-block-end: 0;
+            }
+            &__info{
+                width: 276px;
+                margin-block-end: 0;
+            }
+            &__price{
+                width: 210px;
+                margin-block-end: 0;
+            }
+            &__status{
+                margin-block-end: 0;
+            }
+        }
+
+    }
+    &__header{
+        @include mobile-h2();
+        margin-bottom: 0.5rem;
+        @media (min-width: 720px){
+            @include desktop-tablet-h4();
+            padding-left: 0.5rem;
+        }
+        @media (min-width: 1080px){
+            width: 276px;
+            margin-block-start: 0;
+        }
+        &--flexRow{
+            display: flex;
+            justify-content: space-between;
+
+            @media (min-width: 1080px){
+                border-bottom: 1px $textFieldBorder solid;   
+            }
+        }
+        &--desk{
+            @media (min-width: 1080px){
+                display: flex;
+                flex-direction: column;
+                
+            }
+        }
+    }
+    &__address{
+        @include mobile-h4();
+        margin-bottom: 1rem;
+        @media (min-width: 720px){
+            @include desktop-tablet-h4();
+            position: relative;
+            bottom: 10px;
+            padding-left: 0.5rem;
+        }
+        @media (min-width: 1080px){
+            bottom: 8px;
+        }
+        
+    }
+    &__button{
+        height: 18px;
+        margin-top: 0.6rem;
+        background: none;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+        @media (min-width: 720px){
+            margin-top: 1.5rem;
+        }
+        @media (min-width: 1080px){
+            display: none;
+        }
+    }
+    &__name{
+        @include mobile-h4();
+        @media (min-width: 720px){
+            @include desktop-tablet-h4();
+            width: 248px;
+            padding-left: 0.5rem;
+        }
+        @media (min-width: 1080px){
+            width: 276px;
+            padding-left: 0;
+        }
+    }
+    &__title{
+        @include mobile-h4();
+        font-style: italic;
+        margin-bottom: 1rem;
+        @media (min-width: 720px){
+            @include desktop-tablet-h4();
+            padding-left: 0.5rem;
+        }
+        @media (min-width: 1080px){
+            width: 276px;
+            padding-left: 0;
+        }
+    }
+    &__phone{
+        @include mobile-h4();
+        @media (min-width: 720px){
+            @include desktop-tablet-h4();
+            width: 248px;
+        }
+        @media (min-width: 1080px){
+            width: 276px;
+            
+        }
+    }
+    &__email{
+        @include mobile-h4();
+        font-style: italic;
+        margin-bottom: 1rem;
+        @media (min-width: 720px){
+            @include desktop-tablet-h4();
+        }
+    }
+    &__categories{
+        @include mobile-h4();
+        width:100%;
+        word-wrap: break-word;
+        margin-bottom: 1.5rem;
+        @media (min-width: 720px){
+            @include desktop-tablet-h4();
+        }
+        @media (min-width: 1080px){
+            width: 218px;
+        }
+    }
+    &:last-child{
+        border-bottom: none;
+    }
+    
+    &__button2{
+        display: none;
+        background: none;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+        @media(min-width:1080px){
+            display:flex;
+            align-self: center;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.display{
+    @media (min-width: 1080px)
+    {
+        display: none;
+    }
+}
+
+.created{
+    width: 20px;
+     height: 20px; 
+     border-radius: 50%; 
+     background-color: yellow;
+}
+
+.received{
+    width: 20px;
+     height: 20px; 
+     border-radius: 50%; 
+     background-color: orange;
+}
+
+.completed{    
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%; 
+    background-color: green;
+    
+}

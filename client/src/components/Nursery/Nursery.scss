@@ -1,0 +1,33 @@
+@import '../../_mixins';
+@import '../../variables';
+
+.nursery-heading{
+    font-family: $font-bold1;    
+
+    @media (min-width: 320px)
+    {
+        margin: 0 1rem;        
+    }
+
+    @media (min-width: 720px)
+    {        
+        padding: 6rem 1rem 1rem 1rem;
+    }
+
+    @media (min-width: 1080px)
+    {
+        margin: 0 11.25rem;
+        padding: 6rem 11.5rem 1rem 11.5rem;
+    }
+}
+.nursery-items > *{
+    padding: 0 1rem;
+    border-bottom: solid 1px $textFieldBorder;
+}
+
+
+.nursery-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }

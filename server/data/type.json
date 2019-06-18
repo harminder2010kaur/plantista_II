@@ -1,0 +1,42 @@
+[
+    {
+        "type": "Medicinal",
+        "image": "mint.jpg"
+    },
+    {
+        "type": "Flower",
+        "image": "rose4.jpg"
+    },
+    {
+        "type": "Basket Plant",
+        "image": "hanging_basket1.jpg"
+    },
+    {
+        "type": "Bulbose",
+        "image": "tulip.jpg"
+    },
+    {
+        "type": "Ornamental",
+        "image": "cacti3.jpg"
+    },
+    {
+        "type": "Palm Plant",
+        "image": "palm_plant.jpg"
+    },
+    {
+        "type": "Climbing Plant",
+        "image": "moneyplant.jpg"
+    },
+    {
+        "type": "Succulent",
+        "image": "succulent3.jpg"
+    },
+    {
+        "type": "Fern",
+        "image": "fern1.jpg"
+    },
+    {
+        "type": "Tree",
+        "image": "cherry2.jpg"
+    }
+]

@@ -1,0 +1,347 @@
+$font-light: 'Raleway-Light', sans-serif;
+$font-medium: 'Raleway-Medium', sans-serif;
+$font-reg: 'Raleway-Regular', sans-serif;
+
+$font-light1: 'Nato-Light', sans-serif;
+$font-medium1: 'Nato-Medium', sans-serif;
+$font-reg1: 'Nato-Regular', sans-serif;
+
+$white: #ffffff;
+$black: #000000;
+$silver: #afafaf;
+$blue: #0095FF;
+$navcolor: #e1e1e1;
+$Alabaster: #fafafa;
+
+@font-face {
+  font-family: 'Raleway-Light';    
+  src: url('../../assets/fonts/Raleway/Raleway-Light.ttf');
+}
+
+@font-face{
+  font-family: 'Raleway-Medium';
+  src: url('../../assets/fonts/Raleway/Raleway-Medium.ttf');
+}
+
+@font-face{
+  font-family: 'Raleway-Regular';
+  src: url('../../assets/fonts/Raleway/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Nato-Light';    
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Light.otf');
+}
+
+@font-face{
+  font-family: 'Nato-Medium';
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Medium.otf');
+}
+
+@font-face{
+  font-family: 'Nato-Regular';
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Regular.otf');
+}
+ 
+ .navBar
+ {
+   margin: 0;
+   padding: 0.5rem 1rem;
+   position: fixed;
+   width: 100%;
+   height: 60px;  
+   display: flex;
+   flex-direction: row; 
+   box-shadow: 5px 10px 10px	#696969;			
+   justify-content: space-between;
+   background-color: #4CAF50; // #245403; // #00796b; // #000000; #8ba642;   
+   z-index: 10;
+   visibility: inherit;
+   color: #ffffff;
+   font-weight: bold;
+   font-family: $font-reg1;
+   border-bottom-left-radius: 0.6rem;
+   border-bottom-right-radius: 0.6rem;
+   border-radius: 0.5rem;
+
+   &__left{    
+    position: relative;    
+  } 
+
+   &__logo{      
+       position: absolute;
+       left: 50%;
+       margin-left: -80px;
+       font-family: $font-medium1;
+       letter-spacing: 0.2em;
+       font-size: 1.5rem;      
+       text-align: center;
+   }
+
+   &__right{
+     right: 1rem;
+     position: fixed;
+     text-align: center;
+     padding-top: 0.5rem;
+   }
+
+   @media (min-width: 720px) {
+     padding: 0.5rem 2rem;
+   }
+
+ }
+ 
+ .link
+ {
+   text-decoration: none;
+   color: #ffffff;   
+   transition: color 0.3s ease;
+ }
+ 
+ .link:hover
+ {
+   color: tomato;
+ }
+
+.menuToggle
+ {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   top: 10px; 
+   z-index: 1;   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+.menuToggle input
+ {
+   display: block;
+   width: 28px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+.menuToggle span
+ {    
+   display: block;
+   width: 28px;
+   height: 2px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #ffffff; // #cdcdcd;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background-color 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ .menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ .menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ .menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #ffffff;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ .menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ .menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ .menu
+ {
+   position: absolute;
+   width: 200px;
+   margin: -100px 0 0 -50px;
+   padding: 20px 50px;
+   padding-top: 125px;
+   
+  //    background: #ededed;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));   
+  //    z-index: 10;
+  //    visibility: inherit;
+   color: #ffffff;
+
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ .menu li
+ {
+   padding-top: 3px;
+   font-size: 0.9em;
+   letter-spacing: 0.1em;
+  //  font-size: 18px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ .menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+.search-menu{
+  display: none;
+}
+.search-menu.true{     
+  display: flex;  
+}
+ .search-menu-content{
+   right: 1px;
+   margin-right: 1rem;
+   position: fixed;
+   width: 250px;
+   height: 170px;
+   font-family: $font-reg1;
+   background-color: #ffffff;
+   border-radius: 0.5rem;
+   box-shadow: inset 0 0 6px #000000;
+   padding: 1rem;
+  
+   &__close{
+     display: flex;
+     justify-content: flex-end;
+   }
+
+   &__inputBox{    
+    &--in{
+      color: $black;
+      border-radius: 0.2rem;
+      padding: 0.2rem 0.8rem;
+      margin-bottom: 1rem;
+      margin-top: 0.5rem;
+      border: 1px solid $silver;
+      background-color: $Alabaster;
+      height: 50px;
+      width: 220px;
+      font-family: $font-light1;
+      font-size: 1rem;  
+    }
+   }
+
+   &__button{        
+    display: flex;       
+    justify-content: flex-end;
+    position: relative;
+
+    &--submit{
+        background-color: #4CAF50; // #8ba642;
+        // background-image: linear-gradient(to right, rgb(36,84,3), rgba(107, 95, 95, 0.5));
+        color: $white;            
+        height: 40px;   
+        width: 100px;                     
+        border-radius: 0.5rem;
+        text-transform: uppercase;
+        font-family: $font-reg;
+        font-size: 1rem;        
+        border: 0;        
+        transition: 0.5s;
+    }
+  }
+ }
+
+
+ input {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  width: 200px;
+}
+
+.no-suggestions {
+  color: #999;
+  padding: 0.5rem;
+}
+
+.suggestions {
+  border: 1px solid #999;
+  border-top-width: 0;
+  list-style: none;
+  margin-top: 0;  
+  max-height: 144px;
+  overflow-y: auto;
+  padding-left: 0;
+  width: calc(192px + 1rem);
+  position: absolute;
+  z-index: 1;
+}
+
+.suggestions li {
+  padding: 0.5rem;
+  background-color: #008f68;
+}
+
+.suggestion-active,
+.suggestions li:hover {
+  background-color: #008f68;
+  color: #fae042;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.suggestions li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
+
+.no-suggestions {
+  color: #fff;
+  background-color: tomato;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 1;
+}

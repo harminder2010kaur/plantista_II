@@ -1,0 +1,158 @@
+@import '../../mixins';
+@import '../../variables';
+
+$font-light: 'Raleway-Light', sans-serif;
+$font-medium: 'Raleway-Medium', sans-serif;
+$font-reg: 'Raleway-Regular', sans-serif;
+
+$font-light1: 'Nato-Light', sans-serif;
+$font-medium1: 'Nato-Medium', sans-serif;
+$font-reg1: 'Nato-Regular', sans-serif;
+
+$white: #ffffff;
+$black: #000000;
+$silver: #afafaf;
+$blue: #0095FF;
+$navcolor: #e1e1e1;
+$Alabaster: #fafafa;
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../../assets/fonts/OpenSans/subset-OpenSans-Regular.woff') format('woff'),
+      url('../../assets/fonts/OpenSans/subset-OpenSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Raleway-Light';    
+  src: url('../../assets/fonts/Raleway/Raleway-Light.ttf');
+}
+
+@font-face{
+  font-family: 'Raleway-Medium';
+  src: url('../../assets/fonts/Raleway/Raleway-Medium.ttf');
+}
+
+@font-face{
+  font-family: 'Raleway-Regular';
+  src: url('../../assets/fonts/Raleway/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Nato-Light';    
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Light.otf');
+}
+
+@font-face{
+  font-family: 'Nato-Medium';
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Medium.otf');
+}
+
+@font-face{
+  font-family: 'Nato-Regular';
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Regular.otf');
+}
+
+@keyframes modalShow {
+    from {top: -700px;}
+    to {top: 0;}
+  }
+
+.infoModel{
+    display: none;
+  }
+  .infoModel.true{     
+    display: flex; 
+    animation-name: modalShow;
+    animation-duration: 0.5s; 
+  }
+   .infoModel-content{
+     left: 1px;
+     margin-right: 0.5rem;
+     margin-left: 0.5rem;
+     position: fixed;
+     overflow-y:scroll;
+     overflow-x:auto;
+     z-index: 99;
+     top: 10px;
+     
+     width: 300px;
+     height: 100%;
+     background-color: #ffffff;
+     border-radius: 0.5rem;
+     box-shadow: inset 0 0 6px #000000;
+     padding: 1rem 1rem 2rem 1rem;
+     animation-name: modalShow;
+     animation-duration: 0.7s;
+     animation-timing-function: ease-in-out;
+     
+     @media (min-width: 375px)
+     {
+       left: 20px;
+       width: 320px;
+       height: 90%;
+     }
+
+     @media (min-width: 720px)
+     {
+       margin: 0 2rem;
+       left: 60px;
+       width: 600px;
+       height: 90%;
+     }
+
+     @media (min-width: 1080px)
+     {
+       margin-left: 13rem;
+       width: 700px;
+       height: 90%;
+       overflow-y:scroll;
+      //  overflow: hidden;
+     }
+
+     &__header{
+      display: flex;
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #e1e1e1;
+      justify-content: space-between;
+            
+      &--head{
+        color: #4CAF50;
+        font-size: 1.5em;
+        font-weight: bold;
+        justify-content: flex-start;
+      }
+      &--close{             
+        justify-content: flex-end;        
+      }
+     }
+     
+     &__info{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 0.7rem;
+      
+      &--left{
+        color: #4CAF50;
+        font-family: $font-medium1;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-right: 0.7rem;
+      }
+
+      &--right{
+        font-family: $font-reg1;
+        font-size: 1rem;
+        // text-align: justify;
+        color: #000000;
+      }
+     }
+  
+     
+   }
+
+   .infoModel-content:target{
+    display:block;
+    opacity:2;
+}

@@ -1,0 +1,146 @@
+$font-light: 'Raleway-Light', sans-serif;
+$font-medium: 'Raleway-Medium', sans-serif;
+$font-reg: 'Raleway-Regular', sans-serif;
+
+$font-bold1: 'Nato-Bold', sans-serif;
+$font-light1: 'Nato-Light', sans-serif;
+$font-medium1: 'Nato-Medium', sans-serif;
+$font-reg1: 'Nato-Regular', sans-serif;
+
+$white: #ffffff;
+$black: #000000;
+$silver: #afafaf;
+$blue: #0095FF;
+$navcolor: #e1e1e1;
+$Alabaster: #fafafa;
+
+@font-face {
+  font-family: 'Raleway-Light';    
+  src: url('../../assets/fonts/Raleway/Raleway-Light.ttf');
+}
+
+@font-face{
+  font-family: 'Raleway-Medium';
+  src: url('../../assets/fonts/Raleway/Raleway-Medium.ttf');
+}
+
+@font-face{
+  font-family: 'Raleway-Regular';
+  src: url('../../assets/fonts/Raleway/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Nato-Bold';    
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Nato-Light';    
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Light.otf');
+}
+
+@font-face{
+  font-family: 'Nato-Medium';
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Medium.otf');
+}
+
+@font-face{
+  font-family: 'Nato-Regular';
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Regular.otf');
+}
+
+.heading{    
+    margin: 1rem;
+    font-family: $font-medium1;
+    font-size: 1em;
+    position: absolute;
+    top: 37%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    float: left;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5));
+    // background-image: linear-gradient(to right, rgb(36,84,3), rgba(107, 95, 95, 0.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;      
+    width: 85%;    
+    z-index: 10;
+    color: #ffffff;
+    visibility: inherit;
+    border-radius: 0.5rem;
+    border: 1px solid #ffffff;    
+    line-height: 40px; 
+      a{
+          color: #ffffff;
+      }    
+    @media (min-width: 720px)
+    {
+      left: 48%;
+      width: 60%;
+    }
+    @media (min-width: 1028px)
+    {
+      left: 49%;
+      width: 50%;
+    }
+  }
+  
+  
+  
+  .heading2{
+    padding: 0 1rem;
+    font-family: $font-light1;
+    font-size: 0.8em;
+    position: absolute;
+    top: 72%;
+    letter-spacing: 0.1em;    
+    text-align: justify;
+    
+    float: left;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // background-image: linear-gradient(to right, rgb(59, 57, 57), rgba(107, 95, 95, 0.5));
+    // background-image: linear-gradient(to right, rgb(36,84,3), rgba(107, 95, 95, 0.5));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5));
+      display: flex;
+      align-items: center;
+      justify-content: center;      
+      width: 85%;      
+      z-index: 10;
+      color: #ffffff;
+      visibility: inherit;
+      border-radius: 0.5rem;
+      border: 1px solid #ffffff;
+  
+      // border-top: 1px solid #ffffff;
+      // border-bottom: 1px solid #ffffff;
+      line-height: 30px; 
+
+      a{
+          color: #ffffff;
+      }
+      
+    @media (min-width: 720px)
+    {
+      // left: 47%;
+      width: 60%;
+    }
+    @media (min-width: 1028px)
+    {
+      width: 50%;
+    }
+  }
+
+  .slogan{
+    text-align: center;
+    width:100%;
+    font-family: $font-reg;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  
+  

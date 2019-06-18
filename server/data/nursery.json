@@ -1,0 +1,80 @@
+[
+    {
+        "id": "N0",
+        "nursery_name": "Humber Nurseries Limited",
+        "street": "Garden Center",
+        "suiteNum": "suite 201",
+        "city": "Brampton",
+        "province": "Ontario",
+        "postal": "M6N4B7",        
+        "contact_name": "Michael Scarn",
+        "title": "Regional Manager",
+        "phone": "416 679 4324",
+        "email": "michaelScarn@humbernurseries.com"
+    },
+    {
+        "id": "N1",
+        "nursery_name": "Lakeside Garden Gallery",
+        "street": "Garden Center",
+        "suiteNum": "suite 331",
+        "city": "Brampton",
+        "province": "Ontario",
+        "postal": "M6N4B7",    
+        "contact_name": "Ian Waters",
+        "title": "Office Manager",
+        "phone": "416 679 4326",
+        "email": "ianwaters@lakesidegarden.com"
+    },
+    {
+        "id": "N2",
+        "nursery_name": "Upright Nurseries",
+        "street": "Plant Nursery",
+        "suiteNum": "suite 451",
+        "city": "Caledon",
+        "province": "Ontario",
+        "postal": "M6N4B7",        
+        "contact_name": "Ed Jeon",
+        "title": "Manager",
+        "phone": "416 434 5646",
+        "email": "edJeon@uprightnurseries.com"
+    },
+    {
+        "id": "N3",
+        "nursery_name": "Plant Paradise Country Garden",
+        "street": "Garden Center",
+        "suiteNum": "suite 201",
+        "city": "Caledon East",
+        "province": "Ontario",
+        "postal": "M6N4B7",
+        "contact_name": "Paulo Jackson",
+        "title": "Seasonal Manager",
+        "phone": "416 989 3674",
+        "email": "pJackson@plantparadise.com"
+    },
+    {
+        "id": "N4",
+        "nursery_name": "Glen Echo Nurseries",
+        "street": "Garden Center",
+        "suiteNum": "suite 891",
+        "city": "Caledon East",
+        "province": "Ontario",
+        "postal": "M6H3L0",
+        "contact_name": "Graeme Katsuno",
+        "title": "The Wise One",
+        "phone": "416 889 4254",
+        "email": "gKat@glenecho.com"
+    },
+    {
+        "id": "N5",
+        "nursery_name": "Imperial Nursery",
+        "street": "Garden Center",
+        "suiteNum": "suite 891",
+        "city": "Brampton",
+        "province": "Ontario",
+        "postal": "M6H3L0",        
+        "contact_name": "George Katsuno",
+        "title": "Manager",
+        "phone": "416 889 4264",
+        "email": "george@imperialnursery.com"
+    }
+]

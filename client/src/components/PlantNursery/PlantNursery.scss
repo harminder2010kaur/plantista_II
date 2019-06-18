@@ -1,0 +1,86 @@
+$font-light: 'Raleway-Light', sans-serif;
+$font-medium: 'Raleway-Medium', sans-serif;
+$font-reg: 'Raleway-Regular', sans-serif;
+
+$font-bold1: 'Nato-Bold', sans-serif;
+$font-light1: 'Nato-Light', sans-serif;
+$font-medium1: 'Nato-Medium', sans-serif;
+$font-reg1: 'Nato-Regular', sans-serif;
+
+@font-face {
+  font-family: 'Raleway-Light';    
+  src: url('../../assets/fonts/Raleway/Raleway-Light.ttf');
+}
+
+@font-face{
+  font-family: 'Raleway-Medium';
+  src: url('../../assets/fonts/Raleway/Raleway-Medium.ttf');
+}
+
+@font-face{
+  font-family: 'Raleway-Regular';
+  src: url('../../assets/fonts/Raleway/Raleway-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Nato-Bold';    
+    src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Nato-Light';    
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Light.otf');
+}
+
+@font-face{
+  font-family: 'Nato-Medium';
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Medium.otf');
+}
+
+@font-face{
+  font-family: 'Nato-Regular';
+  src: url('../../assets/fonts/Noto_Sans_HK/NotoSansHK-Regular.otf');
+}
+
+.nursery-heading{    
+    padding: 6rem 0 0 0;
+    font-family: $font-bold1;
+
+    &__head{
+        @media (min-width: 320px) and (max-width: 719px)
+        {
+            padding: 0rem 1rem;
+        }            
+        @media (min-width: 720px) and (max-width: 1079px)
+        {
+            padding: 0 1rem;              		
+        }
+        @media (min-width: 1080px) 
+        {
+            padding: 0 11.25rem;              	
+        }
+    }
+}
+
+.nursery-item{
+    padding: 0 2rem;
+    font-family: $font-bold1;
+}
+
+.back{
+    position: fixed;
+    right: 1rem;
+    @media (min-width: 720px)
+    {
+        right: 2rem;
+    }
+
+    @media (min-width: 1080px)
+    {
+        right: 11.5rem;
+    }
+
+    &__logoImg{
+        height: 18px; 
+    }
+}
