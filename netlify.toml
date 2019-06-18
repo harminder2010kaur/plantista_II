@@ -11,7 +11,7 @@
 # deploy contexts will inherit these settings.
 [context.master.environment]
   # environment variables
-  REACT_APP_BACKEND_SERVER = "https://polar-waters-33351.herokuapp.com"
+  REACT_APP_BACKEND_SERVER = "https://plantista.herokuapp.com"
 [[redirects]]
   from = "/*"
   to = "/index.html"
