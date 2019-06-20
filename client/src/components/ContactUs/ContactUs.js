@@ -22,7 +22,7 @@ export default class ContactUs extends Component{
                             Harminder Kaur
                         </div>
                         <div className="container__insideContainer--address">
-                            BrainStation, 460 King Street West, Toronto , Ontario
+                            28 Mount Royal Circle, Brampton, Ontario
                             <img src={post} alt="Post" className="container__insideContainer--image"/>
                         </div>
                         <div className="container__insideContainer--phone">

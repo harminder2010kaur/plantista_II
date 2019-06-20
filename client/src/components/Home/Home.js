@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './Home.scss';
-import Slideshow from '../Slide/SlideShow';
+// import Slideshow from '../Slide/SlideShow';
 import { NavLink } from 'react-router-dom';
 // import {Animated} from "react-animated-css";
 
 class Home extends Component {
   render(){
   return (
-    <div>      
-        <Slideshow />      
+    <div className="homeContainer">      
+        {/* <Slideshow />       */}
         <div className="heading">
           <div className="heading__text">        
             <h3>A dwell for Plant lovers</h3>            
